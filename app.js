@@ -62,7 +62,7 @@ app.get('/:username',function(req,res){
       html += "</head>";
       html += "<body>";
       html += " <div style='text-align:center;padding-top:50px'>";
-      html += "   <img src='"+appconfig.logo+"' style='max-width:80%'/>";
+      html += "   <img src='"+appconfig.logo_text+"' style='max-width:80%'/>";
       html += " </div>";
       html += "<script>";
       html += " location.href='"+url+"';";
