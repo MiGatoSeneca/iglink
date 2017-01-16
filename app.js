@@ -36,7 +36,7 @@ app.get('/',function(req,res){
 
 app.get('/:username',function(req,res){
   vua.pageview("/"+req.params.username).send();
-  vua.event("Server", "Redirection",req.params.username).send()
+  vua.event("server", "redirection",req.params.username).send()
 
   scraper.getAccountInfo(req.params.username, function(error,data){
     var html = "";
