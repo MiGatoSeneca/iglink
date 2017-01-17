@@ -145,7 +145,7 @@ app.get('/:username',function(req,res){
     html += "  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous'>";
     html += "  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400' type='text/css'>";
     html += "  <link rel='stylesheet' href='./public/css/app.css' type='text/css'>";
-    html += "  <title>iglink Redirection...</title>";
+    html += "  <title>iglink - Redirection "+req.params.username+"</title>";
     html += "  <script>";
     html += "    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){";
     html += "    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),";
