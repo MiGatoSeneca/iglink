@@ -189,7 +189,7 @@ app.get('/:username',function(req,res){
     html += "  <footer class='p-t-20'>";
     html += "    <p class='text-center p-t-20'>created with lots of <span class='emoji'>❤️</span> by the <b>iglin team</b> © 2017</p>";
     html += "  </footer>";
-    if(!url_found){
+    if(url_found){
       html += "  <script>";
       html += "   location.href='"+url+"';";
       html += "  </script>";
