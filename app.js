@@ -29,6 +29,13 @@ app.use('/public', express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.get('/api/version',function(req,res){
+  var response={
+    "version":appconfig.version
+  };
+  res.status(200).jsonp(response);
+});
+
 app.get('/',function(req,res){
 	var html = "";
 	html += "<!DOCTYPE html>";
@@ -111,12 +118,13 @@ app.get('/:username',function(req,res){
     var html = "";
     var url_found=false;
     if(!error){
-      console.log(data);
       var url = "";
-      for ( var post of data.media.nodes){
-        if(post.caption != undefined){
-          if (url==""){
-            url = getUrls(post.caption);
+      if((typeof data != "undefined") && (typeof data.media != "undefined") && (typeof data.media.nodes != "undefined")){
+        for ( var post of data.media.nodes){
+          if(post.caption != "undefined"){
+            if (url==""){
+              url = getUrls(post.caption);
+            }
           }
         }
       }
