@@ -101,7 +101,7 @@ app.get('/',function(req,res){
 	html += "    </div>";
 	html += "  </div>";
 	html += "  <footer>";
-	html += "    <p class='text-center p-t-20'>created with lots of <span class='emoji'>❤️</span> by the <b>iglinkteam</b> © 2017</p>";
+	html += "    <p class='text-center p-t-20'>created with lots of <span class='emoji'>❤️</span> by the <b>iglink team</b> © 2017</p>";
 	html += "  </footer>";
 	html += "  <script src='https://code.jquery.com/jquery-3.1.1.min.js' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' crossorigin='anonymous'></script>";
 	html += "  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>";
@@ -157,12 +157,12 @@ app.get('/:username',function(req,res){
     html += "  ";
     html += "  </script>";
     html += "</head>";
-    html += "<body id=''style='background-color:#f4f4f4;height:100%'>";
+    html += "<body id=''style='background:linear-gradient(rgba(75,180,180,0.8), rgba(255,180,75,0.3));height:100%'>";
     html += "  <div class='container-fluid'/>";
-    html += "    <div class='row text-grey p-y-150'>";
+    html += "    <div class='row text-white p-y-150'>";
     html += "  	  <div class='col-md-12 text-center'>";
     html += "  	    <div class='text-center'>";
-    html += "  	      <img width='150px' src='./public/img/logo_grey.png'/>";
+    html += "  	      <img width='150px' src='./public/img/logo.png'/>";
     html += "  	    </div>";
     html += "  	    <h1>iglink.co</h1>";
     if(!url_found){
@@ -194,8 +194,8 @@ app.get('/:username',function(req,res){
     html += "      </div>";
     html += "    </div>";
     html += "  </div>";
-    html += "  <footer class='p-t-20'>";
-    html += "    <p class='text-center p-t-20'>created with lots of <span class='emoji'>❤️</span> by the <b>iglinkteam</b> © 2017</p>";
+    html += "  <footer class='p-t-20 text-white'>";
+    html += "    <p class='text-center p-t-20'>created with lots of <span class='emoji'>❤️</span> by the <b>iglink team</b> © 2017</p>";
     html += "  </footer>";
     if(url_found){
       html += "  <script>";

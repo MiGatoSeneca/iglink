@@ -10,13 +10,29 @@ h2{
 .text-white,.text-white:hover{
   color:white;
 }
-.text-grey,.text-grey:hover{
-  color:#c0c0c0;
-}
 .p-y-150{
   padding-top:120px;
   padding-bottom:200px;
 }
+@media (max-width: 600px) {
+  h1{
+    font-size:40px
+  }
+  h2{
+    font-size:20px
+  }
+  h4{
+    font-size:12px
+  }
+  h5{
+    font-size:11px
+  }
+  .p-y-150{
+    padding-top:65px;
+    padding-bottom:200px;
+  }
+}
+
 .p-t-20{
   padding-top:20px;
 }
@@ -46,7 +62,7 @@ h2{
   -webkit-animation: spinner-rotation 1.4s linear infinite;
        -o-animation: spinner-rotation 1.4s linear infinite;
           animation: spinner-rotation 1.4s linear infinite;
-  stroke: #c0c0c0;
+  stroke: #ffffff;
 }
 .spinner svg .circle {
   stroke-dasharray: 187;
