@@ -191,7 +191,7 @@ app.get('/:username',function(req,res){
     html += "  </footer>";
     if(!url_found){
       html += "  <script>";
-      //html += "   location.href=''+url+'';";
+      html += "   location.href='"+url+"';";
       html += "  </script>";
     }
     html += "</body>";
