@@ -14,6 +14,9 @@ h2{
   padding-top:120px;
   padding-bottom:200px;
 }
+#result-iglink{
+  font-size: 50px;
+}
 @media (max-width: 600px) {
   h1{
     font-size:40px
@@ -30,6 +33,10 @@ h2{
   .p-y-150{
     padding-top:65px;
     padding-bottom:200px;
+  }
+  #result-iglink{
+    margin: 20px 0px;
+    font-size: 30px;
   }
 }
 
@@ -160,8 +167,4 @@ h2{
 }
 .form-group-iglink{
   margin:12px 0px 15px 0px;
-}
-#result-iglink{
-  margin-top: 30px 0px;
-  font-size: 50px;
 }
