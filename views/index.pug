@@ -1,0 +1,38 @@
+//- index.pug
+extends layout.pug
+
+block content
+  div(class='container-fluid' id='main-container')
+    div(class='row text-white p-y-150')
+      div(class='col-md-12 text-center')
+        img(src='/public/assets/img/logo.png')
+        h1 iglink.co
+        h2 Stop updating your Instagram link
+        h4 using iglink.co your biography link will be always updated
+        h4 with the link of your last post
+        div(class='row p-t-20')
+          div(class='col-md-12 text-center height-150')
+            form(id='create-form')
+              div(class='row')
+                div(class='col-md-4 col-md-offset-4')
+                  div(class='input-group input-group-iglink')
+                    span(class='input-group-addon') @
+                    input(type='username' class='form-control' id='username' placeholder='Instagram acount')
+                  input(type='submit' class='btn btn-primary btn-block' value='Create your link')
+            div(id='result-form' class='hidden')
+              p(id='result-iglink')
+                | http://iglink.co/
+                span(id='username')
+              div(class='row')
+                div(class='col-md-4 col-md-offset-4')
+                  a(id='result-copy-button' data-clipboard-text='' href='javascript:void(0);' class='btn btn-success btn-block') Copy your link
+                  div(class='p-t-20')
+                    a(id='reset-form' href='javascript:void(0)' class='text-white') Create another link
+  footer(class='text-center p-t-20')
+    | created with lots of
+    span(class='emoji') ❤️
+    b &nbsp;iglink team
+    | &nbsp;© 2017
+block scripts
+  script(src='https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js')
+  script(src='/public/assets/js/app.js')
