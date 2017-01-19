@@ -15,8 +15,6 @@ var getUrls = require('get-urls');
 var request = require("request")
 
 
-app.set('views',express.static('views'));
-app.set('view engine', 'jade');
 app.use('/public', express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
