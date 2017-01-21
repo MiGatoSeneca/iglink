@@ -1,4 +1,4 @@
-const conf = require('./config/app.conf');
+const conf = require('./config/app.js');
 
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -32,6 +32,7 @@ app.use(function(req, res, next) {
   next();
 });
 
+
 app.get('/api/version',function(req,res){
   var response={
     "version":conf.version
@@ -40,7 +41,11 @@ app.get('/api/version',function(req,res){
 });
 
 app.get('/', function(req, res, next) {
+
+  const lang = require('./lang/es_ES.js');
+
   var data = conf.pug;
+  data.lang = lang;
   var html = pug.renderFile('./views/index.pug',data);
   res.send(html);
 });
