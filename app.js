@@ -41,9 +41,7 @@ app.get('/api/version',function(req,res){
 });
 
 app.get('/', function(req, res, next) {
-
   const lang = require('./lang/es_ES.js');
-
   var data = conf.pug;
   data.lang = lang;
   var html = pug.renderFile('./views/index.pug',data);
@@ -58,6 +56,7 @@ app.get('/:username',function(req,res){
     json: true
   };
   request(data,function(error, response, data){
+    const lang = require('./lang/es_ES.js');
     var url_found=false;
     if (!error && response.statusCode === 200) {
       var url = "";
@@ -80,6 +79,7 @@ app.get('/:username',function(req,res){
       }
     }
     var data = conf.pug;
+    data.lang = lang;
     data.username = req.params.username;
     if(url_found){
       data.url = url;

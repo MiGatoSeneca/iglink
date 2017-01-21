@@ -2,26 +2,19 @@
 extends ../../layout.pug
 
 block title
-  title iglink - Redirection #{username}
+  title #{lang.redirection.iglink_Redirection} #{username}
 
 block content
   div(id='redirection-container' class='container-fluid')
     div(class='row text-white p-y-150')
       div(class='col-md-12 text-center')
         img(width='150px' src='./public/assets/img/logo.png')
-        h1 iglink.co
-        h2 :(
-        h4 Sorry, there is no link to redirect you...
+        h1 #{lang.iglink_co}
+        h2 #{lang.redirection.error.sad_face}
+        h4 #{lang.redirection.error.Sorry_there_is_no_link_to_redirect_you}
         div(class='row p-t-20')
           div(class='col-md-4 col-md-offset-4')
-            a(href='http://instagram.com/' + username class='btn btn-primary btn-block') Back to Instagram Profile
+            a(href='http://instagram.com/' + username class='btn btn-primary btn-block') #{lang.redirection.error.Back_to_Instagram_Profile}
         script ga('send', 'event', 'redirection', 'redirection_error', '#{username}');
-        h5 iglink.co helps Instagram users to have the biography link
-        h5 always updated with the link of their last post
-  footer(class='text-center p-t-20')
-    | created with lots of
-    span(class='emoji') ❤️
-    b &nbsp;iglink team
-    | &nbsp;© 2017
-block scripts
-  script(src='https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js')
+        h5 #{lang.redirection.iglink_co_helps_Instagram_users_to_have_the_biography_link}
+        h5 #{lang.redirection.always_updated_with_the_link_of_their_last_post}

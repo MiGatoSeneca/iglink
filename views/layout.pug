@@ -17,8 +17,17 @@ html
     script(src='./public/assets/js/analytics.js')
     block title
       title iglink
+      
   body
     block content
+
+    footer(class='text-center p-t-20')
+      | #{lang.created_with_lots_of}
+      span(class='emoji') ❤️
+      b #{lang._iglink_team}
+      | #{lang.copyright}
+
     script(src='https://code.jquery.com/jquery-3.1.1.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+
     block scripts

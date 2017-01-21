@@ -1,6 +1,9 @@
 //- index.pug
 extends layout.pug
 
+block title
+  title #{lang.iglink}
+
 block content
   div(class='container-fluid' id='main-container')
     div(class='row text-white p-y-150')
@@ -28,11 +31,6 @@ block content
                   a(id='result-copy-button' data-clipboard-text='' href='javascript:void(0);' class='btn btn-success btn-block') #{lang.Copy_your_link}
                   div(class='p-t-20')
                     a(id='reset-form' href='javascript:void(0)' class='text-white') #{lang.Create_another_link}
-  footer(class='text-center p-t-20')
-    | #{lang.created_with_lots_of}
-    span(class='emoji') ❤️
-    b #{lang._iglink_team}
-    | #{lang.copyright}
 block scripts
   script(src='https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js')
   script(src='/public/assets/js/app.js')
