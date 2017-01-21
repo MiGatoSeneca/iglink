@@ -60,9 +60,12 @@ app.get('/:username',function(req,res){
       if(typeof igposts != "undefined"){
         for ( var igpost of igposts){
           if(typeof igpost.caption != "undefined"){
+            igpost.caption = igpost.caption.replace(/\n/g, " ");
             if (url==""){
               url = getUrls(igpost.caption);
-              break;
+              if(url!=""){
+                break;
+              }
             }
           }
         }
