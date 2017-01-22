@@ -63,6 +63,7 @@ app.get('/:username',function(req,res){
       var igposts = data.user.media.nodes;
       if(typeof igposts != "undefined"){
         for ( var igpost of igposts){
+          //console.log(igpost.caption);
           if(typeof igpost.caption != "undefined"){
             igpost.caption = igpost.caption.replace(/\n/g, " ");
             if (url==""){
