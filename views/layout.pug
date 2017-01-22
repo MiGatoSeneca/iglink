@@ -7,7 +7,6 @@ html
     viewport(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
     description(content='Stop updating your Instagram link, using iglink.co your biography link will be always updated with the link of your last post')
     author(content='iglink.co')
-    meta(property='og:title' content='iglink')
     meta(property='og:type' content='website')
     meta(property='og:image' content='http://iglink.co/public/assets/img/og_image.jpg')
     meta(property='og:description' content='Stop updating your Instagram link, using iglink.co your biography link will be always updated with the link of your last post')
@@ -17,7 +16,9 @@ html
     script(src='./public/assets/js/analytics.js')
     block title
       title iglink
-      
+      meta(property='og:title' content='iglink')
+      meta(property='og:site_name' content='iglink')
+
   body
     block content
 

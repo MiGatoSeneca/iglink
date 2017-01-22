@@ -12,7 +12,6 @@ var lang = {
   "_iglink_team" : " iglink team",
   "copyright" : " © 2017",
   "redirection" : {
-    "iglink_Redirection" : "iglink - Redirección",
     "Creating_redirection" : "Llevándote a tu enlace",
     "iglink_co_helps_Instagram_users_to_have_the_biography_link" : "iglink.co ayuda a los usuarios de Instagram a tener su link de la biografía",
     "always_updated_with_the_link_of_their_last_post" : "siempre actualizado con el enlace de su último post",
