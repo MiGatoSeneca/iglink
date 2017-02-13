@@ -2,7 +2,7 @@ var lang = {
   "iglink" : "iglink",
   "iglink.co" : "iglink.co",
   "main_title" : "Sácale partido a tu Instagram",
-  "main_subtitle" : "Lleva tu estrategia de Marketing al siguente nivel, permitiendo que tus clientes exploren tu marca más allá de tu perfil.",
+  "main_subtitle" : "Lleva tu estrategia de Marketing al siguiente nivel, permitiendo que tus clientes exploren tu marca más allá de tu perfil.",
   "main_subtitle_2" : "Básicamente el link que le falta a Instagram.",
   "block_1_title" : "Atrae tráfico y ventas desde Instagram",
   "block_1_subtitle" : "Tus seguidores podrán, por fin, hacer click al contenido que compartes en Instagram.",
