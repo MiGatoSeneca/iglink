@@ -20,6 +20,8 @@ block content
           a(href='http://iglink.co') iglink
   div(class='container fixed-top')
     div(class='row')
+      div(class='col-md-12 text-center p-y-20') #{lang.redirection_title}
+    div(class='row')
       each post in posts
         div(class='col-md-4 col-xs-6 text-center p-15 p-xs-5')
           a(href='' + post.url)

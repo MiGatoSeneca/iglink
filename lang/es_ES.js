@@ -23,6 +23,7 @@ var lang = {
   "Copy_your_link" : "Copia tu enlace",
   "Create_another_link" : "Crea otro link",
   "Instagram_acount" : "Cuenta de Instagram",
+  "redirection_title" : "Pulsa en la imagen para visitar el enlace",
   "redirection" : {
     "Creating_redirection" : "Llevándote a tu enlace",
     "iglink_co_helps_Instagram_users_to_have_the_biography_link" : "iglink.co ayuda a los usuarios de Instagram a tener su link de la biografía",
