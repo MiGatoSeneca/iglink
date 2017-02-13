@@ -6,6 +6,7 @@ $('#create-form').submit(function(){
   if(username != ""){
     $('#create-form').addClass('hidden');
     ga('send', 'event', 'creation', 'creation_success', username);
+    fbq('track', 'CompleteRegistration');
     $('#result-form #username').html(username);
     $('#result-copy-button').attr('data-clipboard-text','http://iglink.co/'+username);
     new Clipboard('#result-copy-button');
