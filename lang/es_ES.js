@@ -1,6 +1,6 @@
 var lang = {
   "iglink" : "iglink",
-  "iglink.co" : "iglink.co",
+  "iglink_co" : "iglink.co",
   "main_title" : "Sácale partido a tu Instagram",
   "main_subtitle" : "Lleva tu estrategia de Marketing al siguiente nivel, permitiendo que tus clientes exploren tu marca más allá de tu perfil.",
   "main_subtitle_2" : "Básicamente el link que le falta a Instagram.",
@@ -28,8 +28,8 @@ var lang = {
     "iglink_co_helps_Instagram_users_to_have_the_biography_link" : "iglink.co ayuda a los usuarios de Instagram a tener su link de la biografía",
     "always_updated_with_the_link_of_their_last_post" : "siempre actualizado con el enlace de su último post",
     "error" : {
-      "sad_face" : ":(",
-      "Sorry_there_is_no_link_to_redirect_you" : "No hemos encontrado un enlace al que redirigirte",
+      "sad_face" : "No hay links que mostar",
+      "Sorry_there_is_no_link_to_redirect_you" : "Lo sentimos pero no hay ningún enlace donde redirigirte, si eres el dueño de esta cuenta de instagram recuerda poner en la descripción de tus fotos la url a la quieres que redireccionemos a tus usuarios.",
       "Back_to_Instagram_Profile" : "Volver al perfil de Instagram"
     }
   }
