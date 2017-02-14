@@ -12,7 +12,7 @@ block content
       ul(class='nav navbar-nav')
         li
           a(href='http://instagram.com/' + username class='navbar-brand')
-            img(src='' + avatar class='img-circle')
+            img(src='' + avatar class='img-circle' alt='http://instagram.com/' + username)
         li
           a(href='http://instagram.com/' + username class='navbar-brand-name') #{username}
       ul(class='nav navbar-nav navbar-right hidden-xs')
@@ -25,7 +25,7 @@ block content
       each post in posts
         div(class='col-md-4 col-xs-6 text-center p-15 p-xs-5')
           a(href='' + post.url)
-            img(src='' + post.thumbnail_src class='img-responsive')
+            img(src='' + post.thumbnail_src class='img-responsive' alt='Link #'+post.count+' '+username)
 
 
   script ga('send', 'event', 'redirection', 'redirection_success', '#{username}');

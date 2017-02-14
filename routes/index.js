@@ -22,6 +22,7 @@ router.get('/:username',function(req,res){
   request(data,function(error, response, data){
     const lang = require('../lang/es_ES.js');
     var url_found=false;
+    var count = 1;
     if (!error && response.statusCode === 200) {
       var posts = new Array();
       var iguser = {};
@@ -29,7 +30,6 @@ router.get('/:username',function(req,res){
       var igposts = data.user.media.nodes;
       if(typeof igposts != "undefined"){
         for ( var igpost of igposts){
-          //console.log(igpost.caption);
           if(typeof igpost.caption != "undefined"){
             igpost.caption = igpost.caption.replace(/\n/g, " ");
             urls = getUrls(igpost.caption);
@@ -37,6 +37,8 @@ router.get('/:username',function(req,res){
             for ( var url of urls){
               if(url!=""){
                 igpost.url=url;
+                igpost.count=count;
+                count++;
                 posts.push(igpost);
                 url_found=true;
               }
