@@ -11,8 +11,9 @@ $('#create-form').submit(function(){
     $('#result-copy-button').attr('data-clipboard-text','http://iglink.co/'+username);
     new Clipboard('#result-copy-button');
     $('#result-form').removeClass('hidden');
+    $('#test-button').attr('href','/test/'+username);
   }else{
-    ga('send', 'event', 'creation_error', 'creation_error', 'not_username');
+    ga('send', 'event', 'error', 'creation_error', 'not_username');
   }
 });
 $('#reset-form').click(function(){

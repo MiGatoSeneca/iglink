@@ -270,6 +270,58 @@ h4{
 .m-100{
   margin:100px;
 }
+.m-y-0{
+  margin-top:0px;
+  margin-bottom:0px;
+}
+.m-y-10{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+.m-y-20{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.m-y-25{
+  margin-top:25px;
+  margin-bottom:25px;
+}
+.m-y-30{
+  margin-top:30px;
+  margin-bottom:30px;
+}
+.m-y-40{
+  margin-top:40px;
+  margin-bottom:40px;
+}
+.m-y-50{
+  margin-top:50px;
+  margin-bottom:50px;
+}
+.m-y-60{
+  margin-top:60px;
+  margin-bottom:60px;
+}
+.m-y-70{
+  margin-top:70px;
+  margin-bottom:70px;
+}
+.m-y-75{
+  margin-top:75px;
+  margin-bottom:75px;
+}
+.m-y-80{
+  margin-top:80px;
+  margin-bottom:80px;
+}
+.m-y-90{
+  margin-top:90px;
+  margin-bottom:90px;
+}
+.m-y-100{
+  margin-top:100px;
+  margin-bottom:100px;
+}
 .m-t-0{
   margin-top:0px;
 }
@@ -666,6 +718,11 @@ h4{
 }
 
 
+@media (max-width: 992px){
+  .text-center-md{
+    text-align: center;
+  }
+}
 
 @media (max-width: 767px){
   .navbar-brand{
@@ -680,7 +737,6 @@ h4{
   .p-xs-5{
     padding:5px
   }
-
 }
 .navbar-nav>li{
   float:left;
@@ -719,4 +775,7 @@ h4{
 }
 .text-white:focus{
   color:#fff;
+}
+.bg-grey {
+  background: #f4f4f4;
 }

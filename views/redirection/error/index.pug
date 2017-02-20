@@ -25,4 +25,5 @@ block content
         div(class='col-md-8 col-md-offset-2')
           h5 #{lang.redirection.iglink_co_helps_Instagram_users_to_have_the_biography_link}
           h5 #{lang.redirection.always_updated_with_the_link_of_their_last_post}
-  script ga('send', 'event', 'redirection', 'redirection_error', '#{username}');
+  script
+    | ga('send', 'event', 'error', 'redirection_error', '#{username}');

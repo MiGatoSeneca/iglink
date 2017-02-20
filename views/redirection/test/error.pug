@@ -19,52 +19,19 @@ block content
         h5 iglink.co
   div(class='container m-t-20')
     div(class='row')
-      div(class='col-md-6 col-sm-12')
-        if is_ready
-          div(class='text-center-md')
-            h2(class='bold') ¡Buen Trabajo!
-            hr
-            h3 Ya puedes poner tu enlace de iglink en tu biografía
-            p ¡Genial! Ahora ya puedes usar iglink a tope, introdúcelo en tu biografía y olvídate de cambiar el link cada dos por tres.
-            p Aquí lo tienes, cópialo y pegalo.
-            h2 http://iglink.co/#{username}
-            p &nbsp;
-            div(class='m-b-40')
-              a(href="http://iglink.co/"+username class='btn btn-primary' target="_blank") ¡Mira cómo queda!
-
-        else
-
-          div(class='text-center-md')
-            h2(class='bold') Configura tu iglink
-            hr
-            if reload
-              h3(class="text-red") Sigue sin estar...
-            h3 Añade una URL a la descripción de una foto
-            h4(class="m-b-40") (Estás a un pasito)
-            p Vete a instagram y edita la descripción de tus fotos y añade la URL a la que quieres redireccionar a tus usuarios.
-            p Iglink lee automáticamente tus post y los que tienen una URL en su descripción los hace clickables.
-            h3 Cuando lo hagas pulsa este botón mágico
-            div(class='m-y-40')
-              a(href="javascript:reload();" class='btn btn-primary') Pulsa aquí para ver si ya funciona
-
-        p(class='text-center-md')
+      div(class='col-md-12 text-center')
+        h2(class='bold') Pues parece que no funciona...
+        hr
+        h3 ¿Has introducido bien tu cuenta de instagram?
+        p No hemos podido leer tu cuenta de instagram, comprueba que has introducido bien tu nombre de usuario.
+        p (Ten en cuenta que iglink no funciona para cuentas privadas)
+        div(class="m-y-50")
+          a(href='/' class='btn btn-primary') Vuelve a la página de inicio
+        p
           | Si necesitas ayuda, somos Ana y Pablo y puedes hablarnos en nuestro perfil de instagram&nbsp;
           a(href='http://instagram.com/iglinkco') @iglinkco
           | &nbsp;y estaremos encantados de ayudarte.
 
-
-      div(class='col-sm-6 hidden-sm hidden-xs')
-        p(class="text-center p-y-10") Leemos automáticamente tu perfil, las imágenes que ves aquí en blanco y negro no tienen link, las que tienen color son las que ¡serán clickables! (¡tachaaan!)
-        div(class='row')
-          div(class='col-md-8 col-md-offset-2')
-            div(class='row')
-              each post in posts
-                div(class='col-md-4 col-xs-6 text-center p-15 p-xs-5')
-                  if post.has_url
-                    a(href='' + post.url)
-                      img(src='' + post.thumbnail_src class='img-responsive' alt='Link #'+post.count+' '+username)
-                  else
-                    img(src='' + post.thumbnail_src class='img-responsive black_white opacity-05' alt='No link #'+post.count+' '+username)
 
 
 block scripts
@@ -72,7 +39,6 @@ block scripts
   noscript
     img(height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=266552253792466&ev=PageView&noscript=1")
   script(src='/public/assets/js/facebook.js')
-  script(src='/public/assets/js/config/redirection.js')
   script
     | ga('send', 'event', 'configuration', 'redirection_test', '#{username}');
     | fbq('trackCustom', 'RedirectionTest');

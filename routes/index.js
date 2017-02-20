@@ -68,6 +68,10 @@ router.get('/test/:username',function(req,res){
     json: true
   };
   request(data,function(error, response, data){
+    var reload = true;
+    if(req.query.reload === undefined){
+      reload=false;
+    }
     const lang = require('../lang/es_ES.js');
     var url_found=false;
     var count = 1;
@@ -75,6 +79,7 @@ router.get('/test/:username',function(req,res){
       var posts = new Array();
       var iguser = {};
       iguser.avatar=data.user.profile_pic_url;
+      iguser.is_ready=false;
       var igposts = data.user.media.nodes;
       if(typeof igposts != "undefined"){
         for ( var igpost of igposts){
@@ -88,6 +93,7 @@ router.get('/test/:username',function(req,res){
                 igpost.url=url;
                 igpost.count=count;
                 igpost.has_url=true;
+                iguser.is_ready=true;
                 count++;
                 posts.push(igpost);
                 has_url=true;
@@ -103,15 +109,21 @@ router.get('/test/:username',function(req,res){
           }
         }
       }
+      var data = conf.pug;
+      data.lang = lang;
+      data.reload = reload;
+      data.username = req.params.username;
+      data.is_ready=iguser.is_ready;
+      data.posts = posts;
+      data.avatar = iguser.avatar;
+      var html = pug.renderFile('./views/redirection/test/index.pug',data);
+      res.send(html);
+    }else{
+      var data = conf.pug;
+      data.lang = lang;
+      var html = pug.renderFile('./views/redirection/test/error.pug',data);
+      res.send(html);
     }
-    var data = conf.pug;
-    data.lang = lang;
-    data.username = req.params.username;
-
-    data.posts = posts;
-    data.avatar = iguser.avatar;
-    var html = pug.renderFile('./views/redirection/test/index.pug',data);
-    res.send(html);
   });
 });
 
