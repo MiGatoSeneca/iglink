@@ -10,7 +10,7 @@ var lang = {
   "block_2_subtitle" : "Hemos intentado hacer iglink lo más sencillo posible. Mira nuestros 3 pasos :)",
   "block_3_title" : "3 pasos para que el link de tu BIO tenga sentido",
   "block_3_1_title" : "Paso 1",
-  "block_3_1_subtitle" : "Sube tu imagen a Instagram y añade la URL en la descripción",
+  "block_3_1_subtitle" : "Cuando subas una imagen a Instagram añade la URL en la descripción",
   "block_3_2_title" : "Paso 2",
   "block_3_2_subtitle" : "Crea tu iglink y será tu (automáticamente actualizado) link de la bio",
   "block_3_3_title" : "Paso 3",
@@ -24,6 +24,9 @@ var lang = {
   "Create_another_link" : "Crea otro link",
   "Instagram_acount" : "Cuenta de Instagram",
   "redirection_title" : "Pulsa en la imagen para visitar el enlace",
+  "redirection_test_title" : "Comprueba que tu iglink está funcionando",
+  "redirection_test_subtitle" : "Automáticamente leemos la descripción de tus fotos para buscar el enlance donde llevar a tus usuarios.",
+  "redirection_test_subtitle_2" : "Si la imagen está en blanco y negro, es que no hemos encontrado un link en la descripción de la foto.",
   "redirection" : {
     "Creating_redirection" : "Llevándote a tu enlace",
     "iglink_co_helps_Instagram_users_to_have_the_biography_link" : "iglink.co ayuda a los usuarios de Instagram a tener su link de la biografía",
@@ -32,6 +35,17 @@ var lang = {
       "sad_face" : "No hay links que mostrar",
       "Sorry_there_is_no_link_to_redirect_you" : "Lo sentimos pero no hay ningún enlace donde redirigirte, si eres el dueño de esta cuenta de instagram recuerda poner en la descripción de tus fotos la url a la quieres que redireccionemos a tus usuarios.",
       "Back_to_Instagram_Profile" : "Volver al perfil de Instagram"
+    }
+  },
+  "landing" : {
+    "cook" : {
+      "main_title" : "CONSIGUE QUE TUS SEGUIDORES COCINEN TUS RECETAS",
+      "main_subtitle" : "Aumenta el tráfico de tu blog desde instagram",
+      "main_subtitle_2" : "",
+      "Create_your_link" : "¡Oído Cocina!",
+      "block_1_title" : "Lleva seguidores de instagram a tus recetas",
+      "block_1_subtitle" : "Tus followers podrán, por fin, hacer click en las recetas que compartes en Instagram.",
+
     }
   }
 };

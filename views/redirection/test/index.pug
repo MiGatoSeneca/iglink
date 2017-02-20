@@ -1,0 +1,29 @@
+//- redirection/index.pug
+extends ../../layout.pug
+
+block title
+  title #{lang.iglink} #{username}
+  meta(property='og:title' content='' + lang.iglink + ' - ' + username)
+  meta(property='og:site_name' content='' + lang.iglink + ' - ' + username)
+
+block content
+  div(class='container')
+    div(class='row')
+      div(class='col-md-12 text-center p-y-20')
+        h2(class='m-t-50 m-b-30') #{lang.redirection_test_title}
+        p #{lang.redirection_test_subtitle}
+        p #{lang.redirection_test_subtitle_2}
+    div(class='row')
+      each post in posts
+        div(class='col-md-4 col-xs-6 text-center p-15 p-xs-5')
+          if post.has_url
+            a(href='' + post.url)
+              img(src='' + post.thumbnail_src class='img-responsive' alt='Link #'+post.count+' '+username)
+          else
+            img(src='' + post.thumbnail_src class='img-responsive black_white opacity-05' alt='No link #'+post.count+' '+username)
+
+
+  script ga('send', 'event', 'redirection', 'redirection_test', '#{username}');
+
+block scripts
+  script(src='https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js')

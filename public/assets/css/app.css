@@ -685,3 +685,12 @@ h4{
 .navbar-nav>li{
   float:left;
 }
+
+.black_white {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray;
+}
+.opacity-05 {
+  opacity: 0.5
+}
