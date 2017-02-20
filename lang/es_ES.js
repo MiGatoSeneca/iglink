@@ -40,12 +40,11 @@ var lang = {
   "landing" : {
     "cook" : {
       "main_title" : "CONSIGUE QUE TUS SEGUIDORES COCINEN TUS RECETAS",
-      "main_subtitle" : "Aumenta el tráfico de tu blog desde instagram",
+      "main_subtitle" : "Aumenta el tráfico a tu blog desde Instagram",
       "main_subtitle_2" : "",
       "Create_your_link" : "¡Oído Cocina!",
-      "block_1_title" : "Lleva seguidores de instagram a tus recetas",
-      "block_1_subtitle" : "Tus followers podrán, por fin, hacer click en las recetas que compartes en Instagram.",
-
+      "block_1_title" : "TUS FOLLOWERS PODRÁN HACER CLICK A TUS RECETAS",
+      "block_1_subtitle" : "Nunca más tendrás que modificar el famoso link de la bio"
     }
   }
 };

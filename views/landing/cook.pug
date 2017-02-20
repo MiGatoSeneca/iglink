@@ -5,7 +5,6 @@ block title
   title #{lang.iglink}
   meta(name='title' content='' + lang.iglink)
   meta(name='og:title' content='' + lang.iglink)
-
 block content
   div(class='container-fluid')
     div(class='row' style='background: linear-gradient(rgba(75,75,75,0.8), rgba(25,25,25,0.3)),url(/public/assets/img/landing/cook_background.jpg) center center;background-size: cover;')
@@ -20,8 +19,8 @@ block content
                 path(fill='#ffffff' d='M398.985,247.709l-46.662,62.215l-46.661-62.215h26.544c0-46.023-37.31-83.333-83.333-83.333c-46.023,0-83.332,37.31-83.332,83.334c0.001,46.022,37.31,83.332,83.333,83.332c23.479,0,44.686-9.715,59.833-25.34l32.348,31.354c-23.333,24.071-56.011,39.032-92.182,39.032c-70.901,0-128.378-57.478-128.378-128.379c0-70.902,57.477-128.379,128.378-128.379c70.901,0,128.377,57.478,128.377,128.379H398.985z')
             h5 iglink.co
         div(class='row p-t-50')
-          div(class='col-md-8 col-md-offset-2 text-white text-center')
-            h2(class='m-0') #{lang.landing.cook.main_title}
+          div(class='col-md-10 col-md-offset-1 text-white text-center')
+            h2(class='m-0' style="font-weight:600") #{lang.landing.cook.main_title}
             h3 #{lang.landing.cook.main_subtitle}
             h3 #{lang.landing.cook.main_subtitle_2}
         div(class='row p-t-20 p-b-50')
@@ -30,7 +29,7 @@ block content
               div(class='input-group input-group-iglink')
                 span(class='input-group-addon') @
                 input(type='username' class='form-control' id='username' placeholder='' + lang.Instagram_acount autofocus)
-              input(type='submit' class='btn btn-primary btn-block' value='' + lang.landing.cook.Create_your_link)
+              input(type='submit' class='btn btn-red btn-block' value='' + lang.landing.cook.Create_your_link)
             div(id='result-form' class='hidden')
               p(id='result-iglink')
                 | http://iglink.co/
@@ -39,6 +38,12 @@ block content
                 a(id='result-copy-button' data-clipboard-text='' href='javascript:void(0);' class='btn btn-success btn-block') #{lang.Copy_your_link}
               div(class='p-t-20 text-center')
                 a(id='reset-form' href='javascript:void(0)' class='text-white') #{lang.Create_another_link}
+    div(class='row p-y-20 text-center bg-black text-white')
+      div(class="col-md-12")
+        h3 #{lang.block_4_title}
+        p
+          a(href="https://instagram.com/webosfritos" target="_blank" class="btn text-white") Webosfritos
+          a(href="https://instagram.com/anacocinitas" target="_blank" class="btn text-white") Ana Cocinitas
     div(class='row')
       div(class='col-md-12 text-center p-t-50')
         h2 #{lang.landing.cook.block_1_title}
@@ -46,7 +51,7 @@ block content
         div(class='row p-t-50')
           div(class='col-md-8 col-md-offset-2')
             img(src='/public/assets/img/landing/cook_phones.png' class='full-wid')
-    div(class='row p-y-50 bg-primary text-white')
+    div(class='row p-y-20 bg-red text-white')
       div(class='col-md-12 text-center')
         h2 #{lang.block_2_title}
         h3 #{lang.block_2_subtitle}
@@ -71,22 +76,16 @@ block content
                 b #{lang.block_3_3_title}
               hr
               h3 #{lang.block_3_3_subtitle}
-          div(class='row p-y-20 text-center')
-            div(class="col-md-12")
-              h2 #{lang.block_4_title}
-              h2 👏👏👏
-              p
-                a(href="https://instagram.com/cocoloko.scrap" target="_blank" class="btn") Cocoloko Scrap
-                a(href="https://instagram.com/benicassim.paraiso" target="_blank" class="btn") Benicassim Paraiso
+
           div(class="row p-y-20")
             div(class='col-md-4 col-md-offset-4 p-20')
-              a(href='#' class='btn btn-primary btn-block') #{lang.Create_your_link}
+              a(href='#' class='btn btn-red btn-block') #{lang.Create_your_link}
       div(class='container')
 
 
 block scripts
   script(src='https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js')
-  script(src='/public/assets/js/app.js')
+  script(src='/public/assets/js/landing/cook.js')
   noscript
     img(height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=266552253792466&ev=PageView&noscript=1")
   script(src='/public/assets/js/facebook.js')

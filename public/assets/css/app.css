@@ -694,3 +694,29 @@ h4{
 .opacity-05 {
   opacity: 0.5
 }
+
+.bg-red {
+  background: #DF013A;
+}
+.btn-red:hover {
+    color: #fff;
+    background-color: #DF013A;
+    border-color: #ac012d;
+}
+.btn-red {
+    color: #fff;
+    background-color: #f80141;
+    border-color: #DF013A;
+}
+.text-red {
+  color: #f80141
+}
+.text-red:hover {
+  color: #DF013A
+}
+.bg-black {
+  background: #333;
+}
+.text-white:focus{
+  color:#fff;
+}
