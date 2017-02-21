@@ -655,7 +655,7 @@ h4{
   }
 }
 #main-container{
-  background:linear-gradient(rgba(75,75,155,0.8), rgba(25,25,255,0.3)),url("/public/assets/img/background.jpg") center center;
+  background:linear-gradient(rgba(75,75,155,0.8), rgba(25,25,255,0.3)),url("/assets/img/background.jpg") center center;
   background-size:cover;
 }
 #redirection-container{
