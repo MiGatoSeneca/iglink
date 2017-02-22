@@ -32,9 +32,11 @@ router.get('/:username',function(req,res){
         for ( var igpost of igposts){
           if(typeof igpost.caption != "undefined"){
             igpost.caption = igpost.caption.replace(/\n/g, " ");
-            urls = getUrls(igpost.caption);
+            urls = getUrls(igpost.caption,{stripWWW:false});
             var url = "";
             for ( var url of urls){
+              console.log(url);
+              console.log(igpost.caption);
               if(url!=""){
                 igpost.url=url;
                 igpost.count=count;

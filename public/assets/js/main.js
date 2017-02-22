@@ -21,4 +21,3 @@ $('#reset-form').click(function(){
   $('#create-form #username').val('');
   $('#create-form').removeClass('hidden');
 });
-console.log("loaded");
