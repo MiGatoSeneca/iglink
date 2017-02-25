@@ -655,7 +655,7 @@ h4{
   }
 }
 #main-container{
-  background:linear-gradient(rgba(75,75,155,0.8), rgba(25,25,255,0.3)),url("/assets/img/background.jpg") center center;
+  background:url("/assets/img/andrew-ridley-76547.jpg") center center;
   background-size:cover;
 }
 #redirection-container{
@@ -666,32 +666,34 @@ h4{
   margin:12px 0px 15px 0px;
 }
 .input-group-iglink .form-control{
-  font-size:20px;
-  height:54px;
-  padding: 26px 20px 26px 5px;
+  font-size:14px;
+  padding: 24px 20px;
   border-left:0px;
-}
-.input-group-iglink .form-control:focus{
-  border: 1px solid #ccc;
-  border-left:0px;
+  height:50px;
+  border: 1px solid #fff;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.input-group-iglink .input-group-addon{
-  font-size:20px;
-  line-height: 1.42857143;
-  padding-right: 0px;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-right: 0px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+.input-group-iglink .btn{
+  font-size:14px;
+  height:50px;
+  background-color: #009fa0;
+  border: 1px solid #009fa0;
+
 }
+.input-group-iglink .btn:focus, .input-group-iglink .btn:hover {
+  background-color: #009fa0;
+  outline:none;
+  border: 1px solid #009fa0;
+
+}
+
+.input-group-iglink .form-control:focus{
+  border: 1px solid #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 .navbar-nav>li>a{
   padding:20px 10px;
 }
@@ -754,16 +756,31 @@ h4{
 .bg-red {
   background: #DF013A;
 }
-.btn-red:hover {
-    color: #fff;
-    background-color: #DF013A;
-    border-color: #ac012d;
-}
+
 .btn-red {
     color: #fff;
     background-color: #f80141;
     border-color: #DF013A;
 }
+.btn-red:hover {
+    color: #fff;
+    background-color: #DF013A;
+    border-color: #ac012d;
+}
+
+.btn-coral {
+    color: #fff;
+    background-color: #ff605f;
+    border-color: #ff605f;
+}
+.btn-coral:hover {
+    color: #fff;
+    background-color: #ff605f;
+    border-color: #	#ff605f;
+}
+
+
+
 .text-red {
   color: #f80141
 }
