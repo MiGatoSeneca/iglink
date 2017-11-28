@@ -1,0 +1,66 @@
+//- redirection/index.pug
+extends ../layout.pug
+
+block title
+  title #{lang.iglink} #{username}
+  meta(property='og:title' content='' + lang.iglink + ' - ' + username)
+  meta(property='og:site_name' content='' + lang.iglink + ' - ' + username)
+  meta(name='og:image' content='' + avatarhd)
+  meta(name='twitter:image' content='' + avatarhd)
+  meta(name='twitter:url' content='http://iglink.co/' + username)
+
+block content
+  script
+    | var username = "#{username}";
+    | var last_id = "#{last_id}";
+    | var posts_count = "#{posts_count}";
+    | onRedirection = false;
+
+  
+  nav(class="navbar navbar-default navbar-fixed-top")
+    div(class='container')
+      ul(class='nav navbar-nav')
+        li
+          a(href='http://instagram.com/' + username class='navbar-brand')
+            img(src='' + avatar class='img-circle' alt='http://instagram.com/' + username)
+        li
+          a(href='http://instagram.com/' + username class='navbar-brand-name') #{username}
+      ul(class='nav navbar-nav navbar-right hidden-xs')
+        li
+          a(href='http://iglink.co') iglink
+  div(class='container fixed-top' id='posts-container')
+    div(class='row')
+      div(class='col-md-12 text-center p-y-20') #{lang.redirection_title}
+    //
+      div(class='row')
+        div(class='col-md-12 text-center p-y-20')
+          script(type='text/javascript', src='//ylx-1.com/bnr.php?section=General&pub=973138&format=728x90&ga=g&mbtodb=1')
+          noscript
+            a(href='https://yllix.com/publishers/973138', target='_blank')
+              img(src='//ylx-aff.advertica-cdn.com/pub/728x90.png', border='0')
+        
+    
+    
+    
+    div(class='row' id='posts')
+      each post in posts
+        div(class='col-md-4 col-xs-4 text-center p-15 p-xs-5')
+          a(href='javascript:redirection("'+post.url+'")')
+            img(src='' + post.thumbnail_src class='width-100per' alt='Link #'+post.count+' '+username)
+      
+
+
+  script ga('send', 'event', 'redirection', 'redirection_success', '#{username}');
+  script.
+    //_cf.evt('segment', 'Usuarios-Redireccionados');
+      
+    function redirection(url){
+      ga('send', 'event', 'leave', 'leave_success', '#{username}');
+      onRedirection = true;
+      //_cf.evt('conversion', 'Click-en-publicacion')
+      document.location.href=url;
+    }
+
+block scripts
+  script(src='https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js')
+  script(src='/assets/js/redirection/script.js')
